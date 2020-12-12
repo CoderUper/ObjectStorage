@@ -16,33 +16,28 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5513fc9-9bd9-4b81-a300-69518acfbf49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apiServer/apiServer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/heartbeat/choose.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/heartbeat/heartbeat.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/locate/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/locate/locate.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/object/get.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/object/get_stream.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/object/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/object/put.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/object/put_stream.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/object/store.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataServer/dataServer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataServer/heartbeat/heartbeat.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataServer/locate/locate.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/objectstream/get.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/objectstream/put.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/rabbitmq/rabbitmq.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/rabbitmq/rabbitmq_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/createfile.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/starttestenv.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stoptestenv.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectsRoot/objects/test" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/ObjectsRoot/objects/test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/object/object.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/apiServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/apiServer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/heartbeat/heartbeat.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/heartbeat/heartbeat.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataServer/dataServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/dataServer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataServer/heartbeat/heartbeat.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/heartbeat/heartbeat.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataServer/object/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/object/object.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="C:/Go" />
+  <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -64,51 +59,82 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1lT5fT2YFBZF64fR4TpNjE4BlXb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="E:\Goland\src\ObjectStorage\src\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Goland\src\ObjectStorage\src\lib" />
       <recent name="E:\Goland\src\ObjectStorage\src" />
       <recent name="E:\Goland\src\ObjectStorage\dataServer" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Goland\src\ObjectStorage\src\lib" />
-    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build apiServer.go">
+    <configuration name="go build ObjectStorage" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="ObjectStorage" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-ldflags=&quot;-linkmode internal&quot;" />
+      <useCustomBuildTags value="true" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build apiServer.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="ObjectStorage" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
+      <filePath value="$PROJECT_DIR$/apiServer/apiServer.go" />
+      <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Build.go build ObjectStorage" />
+      <item itemvalue="Go Build.go build apiServer.go" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build apiServer.go" />
+        <item itemvalue="Go Build.go build ObjectStorage" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5513fc9-9bd9-4b81-a300-69518acfbf49" name="Default Changelist" comment="" />
+      <created>1607694590815</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607694590815</updated>
+    </task>
+    <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
@@ -118,37 +144,95 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="203" key="GridCell.Tab.0.bottom" timestamp="1607655858278">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="946" y="474" key="#GOROOT" timestamp="1607697576789">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="946" y="474" key="#GOROOT/67.27.1853.1053@67.27.1853.1053" timestamp="1607697576789" />
+    <state x="778" y="299" width="400" height="327" key="#Go_Modules" timestamp="1607695481978">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="778" y="299" width="400" height="327" key="#Go_Modules/67.27.1853.1053@67.27.1853.1053" timestamp="1607695481978" />
+    <state x="441" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607698795036">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="441" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1607698795036" />
+    <state x="565" y="256" width="599" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607757183140">
+      <screen x="67" y="27" width="1606" height="857" />
+    </state>
+    <state x="565" y="256" width="599" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1606.857@67.27.1606.857" timestamp="1607757183140" />
+    <state x="813" y="155" width="666" height="772" key="#go_build_ObjectStorage/" timestamp="1607697213555">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="813" y="155" width="666" height="772" key="#go_build_ObjectStorage//67.27.1853.1053@67.27.1853.1053" timestamp="1607697213555" />
+    <state x="823" y="222" width="309" height="482" key="EnvironmentVariablesDialog" timestamp="1607697187173">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="823" y="222" width="309" height="482" key="EnvironmentVariablesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1607697187173" />
+    <state x="673" y="185" width="374" height="394" key="FileChooserDialogImpl" timestamp="1607699798986">
+      <screen x="67" y="27" width="1606" height="857" />
+    </state>
+    <state x="673" y="185" width="374" height="394" key="FileChooserDialogImpl/67.27.1606.857@67.27.1606.857" timestamp="1607699798986" />
+    <state x="766" y="221" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1607695072480" />
+    <state width="1560" height="160" key="GridCell.Tab.0.bottom" timestamp="1607700925799">
+      <screen x="67" y="27" width="1606" height="857" />
     </state>
     <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607655858278" />
-    <state width="1493" height="203" key="GridCell.Tab.0.center" timestamp="1607655858278">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1560" height="160" key="GridCell.Tab.0.bottom/67.27.1606.857@67.27.1606.857" timestamp="1607700925799" />
+    <state width="1807" height="211" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1607698915113" />
+    <state width="1560" height="160" key="GridCell.Tab.0.center" timestamp="1607700925798">
+      <screen x="67" y="27" width="1606" height="857" />
     </state>
     <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607655858278" />
-    <state width="1493" height="203" key="GridCell.Tab.0.left" timestamp="1607655858278">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1560" height="160" key="GridCell.Tab.0.center/67.27.1606.857@67.27.1606.857" timestamp="1607700925798" />
+    <state width="1807" height="211" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1607698915111" />
+    <state width="1560" height="160" key="GridCell.Tab.0.left" timestamp="1607700925798">
+      <screen x="67" y="27" width="1606" height="857" />
     </state>
     <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607655858278" />
-    <state width="1493" height="203" key="GridCell.Tab.0.right" timestamp="1607655858278">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1560" height="160" key="GridCell.Tab.0.left/67.27.1606.857@67.27.1606.857" timestamp="1607700925798" />
+    <state width="1807" height="211" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1607698915111" />
+    <state width="1560" height="160" key="GridCell.Tab.0.right" timestamp="1607700925799">
+      <screen x="67" y="27" width="1606" height="857" />
     </state>
     <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607655858278" />
-    <state x="270" y="57" key="SettingsEditor" timestamp="1607674787061">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1560" height="160" key="GridCell.Tab.0.right/67.27.1606.857@67.27.1606.857" timestamp="1607700925799" />
+    <state width="1807" height="211" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1607698915112" />
+    <state x="350" y="86" key="SettingsEditor" timestamp="1607700916538">
+      <screen x="67" y="27" width="1606" height="857" />
     </state>
     <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607674787061" />
+    <state x="350" y="86" key="SettingsEditor/67.27.1606.857@67.27.1606.857" timestamp="1607700916535" />
+    <state x="393" y="100" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1607699620814" />
+    <state x="484" y="136" width="762" height="637" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607755114228">
+      <screen x="67" y="27" width="1606" height="857" />
+    </state>
+    <state x="484" y="136" width="762" height="637" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1606.857@67.27.1606.857" timestamp="1607755114228" />
     <state x="562" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607655523009">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

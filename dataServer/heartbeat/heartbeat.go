@@ -7,10 +7,10 @@ import (
 )
 
 func StartHeartBeat() {
-	q := rabbitmq.New("RABBITMQ_SERVER")
+	q := rabbitmq.New(os.Getenv("RABBITMQ_SERVER"))
 	defer q.Close()
 	for {
-		q.Publish("apiServer", os.Getenv("LISTEN_ADDRESS"))
+		q.Publish("apiServers", os.Getenv("LISTEN_ADDRESS"))
 		time.Sleep(5 * time.Second)
 	}
 }

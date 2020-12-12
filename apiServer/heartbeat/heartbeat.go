@@ -2,7 +2,6 @@ package heartbeat
 
 import (
 	"ObjectStorage/src/lib/rabbitmq"
-	"math/rand"
 	"os"
 	"strconv"
 	"sync"

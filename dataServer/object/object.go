@@ -8,8 +8,6 @@ import (
 	"strings"
 )
 
-const STORAGE_ROOT string = "E:\\Goland\\src\\ObjectStorage\\ObjectsRoot"
-
 func Handler(w http.ResponseWriter, r *http.Request) {
 	m := r.Method
 	if m == http.MethodPut {
@@ -23,7 +21,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusMethodNotAllowed)
 }
 func put(w http.ResponseWriter, r *http.Request) {
-	f, err := os.Create(STORAGE_ROOT + "\\objects\\" + strings.Split(r.URL.EscapedPath(), "/")[2])
+	f, err := os.Create(os.Getenv("STORAGE_ROOT") + "/objects/" + strings.Split(r.URL.EscapedPath(), "/")[2])
 	if err != nil {
 		log.Println(err)
 		w.WriteHeader(http.StatusInternalServerError)
@@ -36,7 +34,7 @@ func put(w http.ResponseWriter, r *http.Request) {
 }
 
 func get(w http.ResponseWriter, r *http.Request) {
-	f, err := os.Open(STORAGE_ROOT + "\\objects\\" + strings.Split(r.URL.EscapedPath(), "/")[2])
+	f, err := os.Open(os.Getenv("STORAGE_ROOT") + "/objects/" + strings.Split(r.URL.EscapedPath(), "/")[2])
 	if err != nil {
 		log.Println(err)
 		w.WriteHeader(http.StatusNotFound)
