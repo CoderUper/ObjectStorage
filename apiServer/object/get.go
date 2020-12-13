@@ -5,6 +5,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"net/url"
 	"strconv"
 	"strings"
 )
@@ -35,7 +36,7 @@ func get(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//3.若数据存在则向dataServer发起请求
-	stream, err := getStream(name)
+	stream, err := getStream(url.PathEscape(meta.Hash))
 	if err != nil {
 		log.Println(err)
 		w.WriteHeader(http.StatusNotFound)

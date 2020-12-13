@@ -26,14 +26,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5513fc9-9bd9-4b81-a300-69518acfbf49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apiServer/object/delete.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apiServer/versions/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/es/es.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/utils/utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initenv.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/put.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/putmapping.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiServer/apiServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/apiServer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiServer/object/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/get.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/object/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiServer/object/put.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/put.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/versions/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/versions/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createfile.sh" beforeDir="false" afterPath="$PROJECT_DIR$/createfile.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/es/es.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/es/es.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starttestenv.sh" beforeDir="false" afterPath="$PROJECT_DIR$/starttestenv.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="C:/Go" />
+  <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -65,6 +68,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -73,7 +77,7 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,14 +87,15 @@
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="E:\Goland\src\ObjectStorage\src\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Goland\src\ObjectStorage\src\lib" />
       <recent name="E:\Goland\src\ObjectStorage\src" />
       <recent name="E:\Goland\src\ObjectStorage\dataServer" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="E:\Goland\src\ObjectStorage\src\lib" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build apiServer.go">
@@ -130,6 +135,14 @@
       <option name="presentableId" value="Default" />
       <updated>1607694590815</updated>
     </task>
+    <task id="LOCAL-00001" summary="move to ubuntu platform,fixed some bugs and run correctly">
+      <created>1607778089100</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607778089100</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,24 +174,26 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="move to ubuntu platform,fixed some bugs and run correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="move to ubuntu platform,fixed some bugs and run correctly" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="729" y="350" key="#GOROOT" timestamp="1607771506638">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="946" y="474" key="#GOROOT" timestamp="1607778147687">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="729" y="350" key="#GOROOT/0.0.1536.824@0.0.1536.824" timestamp="1607771506638" />
-    <state x="946" y="474" key="#GOROOT/67.27.1853.1053@67.27.1853.1053" timestamp="1607697576789" />
+    <state x="946" y="474" key="#GOROOT/67.27.1853.1053@67.27.1853.1053" timestamp="1607778147687" />
     <state x="778" y="299" width="400" height="327" key="#Go_Modules" timestamp="1607695481978">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="778" y="299" width="400" height="327" key="#Go_Modules/67.27.1853.1053@67.27.1853.1053" timestamp="1607695481978" />
-    <state x="441" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607698795036">
+    <state x="441" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607778144245">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="441" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1607698795036" />
+    <state x="441" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1607778144245" />
     <state x="565" y="256" width="599" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607757183140">
       <screen x="67" y="27" width="1606" height="857" />
     </state>
@@ -234,6 +249,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607774776376" />
+    <state x="684" y="161" width="618" height="783" key="find.popup" timestamp="1607781585880">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="684" y="161" width="618" height="783" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1607781585880" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607684908907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

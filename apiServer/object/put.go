@@ -5,6 +5,7 @@ import (
 	"ObjectStorage/src/lib/utils"
 	"log"
 	"net/http"
+	"net/url"
 	"strings"
 )
 
@@ -17,7 +18,7 @@ func put(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//以唯一的哈希值作为文件名进行存储
-	status, err := storeObject(r.Body, hash)
+	status, err := storeObject(r.Body, url.PathEscape(hash))
 	if err != nil {
 		log.Println(err)
 		w.WriteHeader(http.StatusInternalServerError)

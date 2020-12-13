@@ -10,14 +10,14 @@ import (
 )
 
 type Metadata struct {
-	Name    string
-	Version int
-	Size    int64
-	Hash    string
+	Name    string `json:"name"`
+	Version int    `json:"version"`
+	Size    int64  `json:"size"`
+	Hash    string `json:"hash"`
 }
 
 func getMetadata(name string, versionId int) (meta Metadata, err error) {
-	url := fmt.Sprintf("http://%s/metadata/objects/%s_%d/source", os.Getenv("ES_SERVER"), name, versionId)
+	url := fmt.Sprintf("http://%s/metadata/objects/%s_%d/_source", os.Getenv("ES_SERVER"), name, versionId)
 	r, err := http.Get(url)
 	if err != nil {
 		return
@@ -69,10 +69,12 @@ func GetMetadata(name string, version int) (meta Metadata, err error) {
 }
 
 func PutMetadata(name string, version int, size int64, hash string) error {
-	doc := fmt.Sprintf(`{"name":%s,"version":%d,"size":%d,"hash":%s}`, name, version, size, hash)
+	doc := fmt.Sprintf(`{"name":"%s","version":%d,"size":%d,"hash":"%s"}`, name, version, size, hash)
 	client := http.Client{}
 	url := fmt.Sprintf("http://%s/metadata/objects/%s_%d?op_type=create", os.Getenv("ES_SERVER"), name, version)
 	request, _ := http.NewRequest("PUT", url, strings.NewReader(doc))
+	request.Header.Add("Content-Type", "application/json")
+	request.Header.Add("datatype", "json")
 	r, err := client.Do(request)
 	if err != nil {
 		return err
@@ -98,10 +100,11 @@ func AddVersion(name, hash string, size int64) error {
 
 func SearchAllVersions(name string, from, size int) ([]Metadata, error) {
 	//构造请求url
-	url := fmt.Sprintf("http://%s//metadata/_search?sort=name,version&from=%d&size=%d", os.Getenv("ES_SERVER"), from, size)
+	url := fmt.Sprintf("http://%s/metadata/objects/_search?sort=name,version&from=%d&size=%d", os.Getenv("ES_SERVER"), from, size)
 	if name != "" {
 		url += "&q=name:" + name
 	}
+	fmt.Println(url)
 	r, err := http.Get(url)
 	if err != nil {
 		return nil, err

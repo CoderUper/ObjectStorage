@@ -28,10 +28,11 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 			b, _ := json.Marshal(metas[i])
 			w.Write(b)
 			w.Write([]byte("\n"))
-			if len(metas) != size {
-				return
-			}
-			from += size
+
 		}
+		if len(metas) != size {
+			return
+		}
+		from += size
 	}
 }
