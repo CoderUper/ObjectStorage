@@ -25,17 +25,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5513fc9-9bd9-4b81-a300-69518acfbf49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/initenv.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/put.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/putmapping.sh" afterDir="false" />
+    <list default="true" id="f5513fc9-9bd9-4b81-a300-69518acfbf49" name="Default Changelist" comment="be able to run at ubuntu18 platform,fixed some bugs in elasticsearch v6.2 restful apis.now our storage system can be able to put/get/delete filesand get history versions.">
+      <change afterPath="$PROJECT_DIR$/dataServer/temp/commit.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataServer/temp/delete.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataServer/temp/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataServer/temp/patch.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataServer/temp/post.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataServer/temp/put.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deletefile.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/objectstream/temp.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test4.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiServer/object/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/get.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiServer/object/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/locate/locate.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/locate/locate.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiServer/object/put.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/put.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiServer/versions/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/versions/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/object/put_stream.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/put_stream.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/object/store.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/store.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createfile.sh" beforeDir="false" afterPath="$PROJECT_DIR$/createfile.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/es/es.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/es/es.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataServer/dataServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/dataServer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataServer/locate/locate.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/locate/locate.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataServer/object/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/object/object.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/utils.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starttestenv.sh" beforeDir="false" afterPath="$PROJECT_DIR$/starttestenv.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607778089100</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="be able to run at ubuntu18 platform,fixed some bugs in elasticsearch v6.2 restful apis.now our storage system can be able to put/get/delete filesand get history versions.">
+      <created>1607858454909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607858454909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +191,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="move to ubuntu platform,fixed some bugs and run correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="move to ubuntu platform,fixed some bugs and run correctly" />
+    <MESSAGE value="be able to run at ubuntu18 platform,fixed some bugs in elasticsearch v6.2 restful apis.now our storage system can be able to put/get/delete filesand get history versions." />
+    <option name="LAST_COMMIT_MESSAGE" value="be able to run at ubuntu18 platform,fixed some bugs in elasticsearch v6.2 restful apis.now our storage system can be able to put/get/delete filesand get history versions." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -241,6 +258,10 @@
     <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607771432657" />
     <state x="350" y="86" key="SettingsEditor/67.27.1606.857@67.27.1606.857" timestamp="1607700916535" />
     <state x="393" y="100" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1607699620814" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1607858481328">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1607858481328" />
     <state x="484" y="136" width="762" height="637" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607755114228">
       <screen x="67" y="27" width="1606" height="857" />
     </state>
@@ -249,10 +270,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607774776376" />
-    <state x="684" y="161" width="618" height="783" key="find.popup" timestamp="1607781585880">
+    <state x="684" y="161" width="618" height="783" key="find.popup" timestamp="1607865929810">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="684" y="161" width="618" height="783" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1607781585880" />
+    <state x="684" y="161" width="618" height="783" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1607865929810" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607684908907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

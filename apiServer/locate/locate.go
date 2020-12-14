@@ -20,6 +20,6 @@ func Locate(name string) string {
 	return s
 }
 
-func Exsit(name string) bool {
+func Exist(name string) bool {
 	return Locate(name) != ""
 }

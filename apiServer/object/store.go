@@ -1,21 +1,31 @@
 package object
 
 import (
+	"ObjectStorage/apiServer/locate"
+	"ObjectStorage/src/lib/utils"
+	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 )
 
-func storeObject(r io.Reader, object string) (int, error) {
-	//putStream相当于创建了一个读写管道，读端交给http client,写端返回给客户，等待客户写入数据，没有数据时http client会阻塞住
-	stream, err := putStream(object)
-	if err != nil {
-		return http.StatusServiceUnavailable, err
+func storeObject(r io.Reader, hash string, size int64) (int, error) {
+	//locate time consume 1s,because our rabbitmq  timeout is 1s.
+	if locate.Exist(url.PathEscape(hash)) {
+		return http.StatusOK, nil
 	}
-	io.Copy(stream, r)
-	//只有调用clsoe方法后才会向管道写入io.EOF，HTTP client才会返回，不然会一直阻塞在读数据部分
-	err = stream.Close()
-	if err != nil {
-		return http.StatusInternalServerError, err
+
+	stream, e := putStream(url.PathEscape(hash), size)
+	if e != nil {
+		return http.StatusInternalServerError, e
 	}
-	return http.StatusOK, err
+
+	reader := io.TeeReader(r, stream)
+	d := utils.CalculateHash(reader)
+	if d != hash {
+		stream.Commit(false)
+		return http.StatusBadRequest, fmt.Errorf("object hash mismatch, calculated=%s, requested=%s", d, hash)
+	}
+	stream.Commit(true)
+	return http.StatusOK, nil
 }
