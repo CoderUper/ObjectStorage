@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	locate.CollectObjects()
 	//发送心跳
 	go heartbeat.StartHeartBeat()
 	//接收定位消息

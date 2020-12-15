@@ -25,25 +25,50 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5513fc9-9bd9-4b81-a300-69518acfbf49" name="Default Changelist" comment="be able to run at ubuntu18 platform,fixed some bugs in elasticsearch v6.2 restful apis.now our storage system can be able to put/get/delete filesand get history versions.">
-      <change afterPath="$PROJECT_DIR$/dataServer/temp/commit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataServer/temp/delete.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataServer/temp/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataServer/temp/patch.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataServer/temp/post.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataServer/temp/put.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deletefile.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/objectstream/temp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test4.sh" afterDir="false" />
+    <list default="true" id="f5513fc9-9bd9-4b81-a300-69518acfbf49" name="Default Changelist" comment="add function to compare hash code twith the data from user upload.the apiServer is responsible to the hash code compute,the dataServer is responsible to the data storage and delete.">
+      <change afterPath="$PROJECT_DIR$/apiServer/object/post.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiServer/temp/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiServer/temp/head.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiServer/temp/put.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataServer/temp/get.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataServer/temp/head.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hash" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repairTools/deleteOldMetadata/deleteOldMetadata.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repairTools/deleteOrphanObject/deleteOrphanObject.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repairTools/objectScanner/objectScanner.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/rs/common.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/rs/decoder.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/rs/encoder.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/rs/get.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/rs/put.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/rs/resumable_get.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/rs/resumable_put.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/types/types.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test6.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test6/test6_1.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test7/genFile.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test7/put.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test8/createGarbage.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test8/push.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/tset5.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/apiServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/apiServer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/heartbeat/choose.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/heartbeat/choose.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiServer/locate/locate.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/locate/locate.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiServer/object/put.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/put.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/object/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/get.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/object/get_stream.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/get_stream.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiServer/object/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiServer/object/put_stream.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/put_stream.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiServer/object/store.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiServer/object/store.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createfile.sh" beforeDir="false" afterPath="$PROJECT_DIR$/createfile.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataServer/dataServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/dataServer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataServer/locate/locate.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/locate/locate.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataServer/object/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/object/object.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataServer/temp/commit.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/temp/commit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataServer/temp/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataServer/temp/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/es/es.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/es/es.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/objectstream/temp.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/objectstream/temp.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/utils/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/utils.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starttestenv.sh" beforeDir="false" afterPath="$PROJECT_DIR$/starttestenv.sh" afterDir="false" />
     </list>
@@ -93,7 +118,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -158,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607858454909</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add function to compare hash code twith the data from user upload.the apiServer is responsible to the hash code compute,the dataServer is responsible to the data storage and delete.">
+      <created>1607929674883</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607929674883</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +224,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="move to ubuntu platform,fixed some bugs and run correctly" />
     <MESSAGE value="be able to run at ubuntu18 platform,fixed some bugs in elasticsearch v6.2 restful apis.now our storage system can be able to put/get/delete filesand get history versions." />
-    <option name="LAST_COMMIT_MESSAGE" value="be able to run at ubuntu18 platform,fixed some bugs in elasticsearch v6.2 restful apis.now our storage system can be able to put/get/delete filesand get history versions." />
+    <MESSAGE value="add function to compare hash code twith the data from user upload.the apiServer is responsible to the hash code compute,the dataServer is responsible to the data storage and delete." />
+    <option name="LAST_COMMIT_MESSAGE" value="add function to compare hash code twith the data from user upload.the apiServer is responsible to the hash code compute,the dataServer is responsible to the data storage and delete." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -211,10 +244,11 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="441" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1607778144245" />
-    <state x="565" y="256" width="599" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607757183140">
-      <screen x="67" y="27" width="1606" height="857" />
+    <state x="642" y="308" width="599" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608036639888">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="565" y="256" width="599" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1606.857@67.27.1606.857" timestamp="1607757183140" />
+    <state x="642" y="308" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1608036639888" />
     <state x="813" y="155" width="666" height="772" key="#go_build_ObjectStorage/" timestamp="1607697213555">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -252,16 +286,16 @@
     <state width="1493" height="95" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607771405798" />
     <state width="1560" height="160" key="GridCell.Tab.0.right/67.27.1606.857@67.27.1606.857" timestamp="1607700925799" />
     <state width="1807" height="211" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1607698915112" />
-    <state x="270" y="57" key="SettingsEditor" timestamp="1607771432657">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="393" y="100" key="SettingsEditor" timestamp="1607947535323">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607771432657" />
     <state x="350" y="86" key="SettingsEditor/67.27.1606.857@67.27.1606.857" timestamp="1607700916535" />
-    <state x="393" y="100" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1607699620814" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1607858481328">
+    <state x="393" y="100" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1607947535323" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1607929688689">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1607858481328" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1607929688689" />
     <state x="484" y="136" width="762" height="637" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607755114228">
       <screen x="67" y="27" width="1606" height="857" />
     </state>
@@ -270,13 +304,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607774776376" />
-    <state x="684" y="161" width="618" height="783" key="find.popup" timestamp="1607865929810">
+    <state x="684" y="161" width="618" height="783" key="find.popup" timestamp="1608000624434">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="684" y="161" width="618" height="783" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1607865929810" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607684908907">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="684" y="161" width="618" height="783" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608000624434" />
+    <state x="587" y="212" width="811" height="867" key="search.everywhere.popup" timestamp="1608039629410">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607684908907" />
+    <state x="587" y="212" width="811" height="867" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608039629410" />
   </component>
 </project>

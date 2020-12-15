@@ -2,6 +2,9 @@ package object
 
 import (
 	"ObjectStorage/src/lib/es"
+	"ObjectStorage/src/lib/utils"
+	"compress/gzip"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -11,23 +14,21 @@ import (
 )
 
 func get(w http.ResponseWriter, r *http.Request) {
-	//1.从元数据服务器上获取文件名贺版本号
-	version := 0
 	name := strings.Split(r.URL.EscapedPath(), "/")[2]
 	versionId := r.URL.Query()["version"]
-	var err error
+	version := 0
+	var e error
 	if len(versionId) != 0 {
-		version, err = strconv.Atoi(versionId[0])
-		if err != nil {
-			log.Println(err)
-			w.WriteHeader(http.StatusInternalServerError)
+		version, e = strconv.Atoi(versionId[0])
+		if e != nil {
+			log.Println(e)
+			w.WriteHeader(http.StatusBadRequest)
 			return
 		}
 	}
-	//2.查看数据是否被删除
-	meta, err := es.GetMetadata(name, version)
-	if err != nil {
-		log.Println(err)
+	meta, e := es.GetMetadata(name, version)
+	if e != nil {
+		log.Println(e)
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
@@ -35,12 +36,34 @@ func get(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
 		return
 	}
-	//3.若数据存在则向dataServer发起请求
-	stream, err := getStream(url.PathEscape(meta.Hash))
-	if err != nil {
-		log.Println(err)
+	hash := url.PathEscape(meta.Hash)
+	stream, e := GetStream(hash, meta.Size)
+	if e != nil {
+		log.Println(e)
 		w.WriteHeader(http.StatusNotFound)
 		return
 	}
-	io.Copy(w, stream)
+	offset := utils.GetOffsetFromHeader(r.Header)
+	if offset != 0 {
+		stream.Seek(offset, io.SeekCurrent)
+		w.Header().Set("content-range", fmt.Sprintf("bytes %d-%d/%d", offset, meta.Size-1, meta.Size))
+		w.WriteHeader(http.StatusPartialContent)
+	}
+	acceptGzip := false
+	encoding := r.Header["Accept-Encoding"]
+	for i := range encoding {
+		if encoding[i] == "gzip" {
+			acceptGzip = true
+			break
+		}
+	}
+	if acceptGzip {
+		w.Header().Set("content-encoding", "gzip")
+		w2 := gzip.NewWriter(w)
+		io.Copy(w2, stream)
+		w2.Close()
+	} else {
+		io.Copy(w, stream)
+	}
+	stream.Close()
 }

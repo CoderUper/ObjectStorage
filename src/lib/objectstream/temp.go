@@ -3,6 +3,7 @@ package objectstream
 import (
 	"fmt"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"strings"
 )
@@ -47,9 +48,10 @@ func (w *TempPutStream) Write(p []byte) (n int, err error) {
 }
 
 func (w *TempPutStream) Commit(good bool) {
-	method := "DELETE"
+	log.Println("commit status:", good)
+	method := http.MethodDelete
 	if good {
-		method = "PUT"
+		method = http.MethodPut
 	}
 	request, _ := http.NewRequest(method, "http://"+w.Server+"/temp/"+w.Uuid, nil)
 	client := http.Client{}

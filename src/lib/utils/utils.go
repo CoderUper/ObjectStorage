@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 func GetHashFromHeader(h http.Header) string {
@@ -28,4 +29,17 @@ func CalculateHash(r io.Reader) string {
 	h := sha256.New()
 	io.Copy(h, r)
 	return base64.StdEncoding.EncodeToString(h.Sum(nil))
+}
+
+func GetOffsetFromHeader(h http.Header) int64 {
+	byteRange := h.Get("range")
+	if len(byteRange) < 7 {
+		return 0
+	}
+	if byteRange[0:6] != "bytes=" {
+		return 0
+	}
+	bytePos := strings.Split(byteRange[6:], "-")
+	offset, _ := strconv.ParseInt(bytePos[0], 0, 64)
+	return offset
 }

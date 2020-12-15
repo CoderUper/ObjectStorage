@@ -4,6 +4,7 @@ import (
 	"ObjectStorage/apiServer/heartbeat"
 	"ObjectStorage/apiServer/locate"
 	"ObjectStorage/apiServer/object"
+	"ObjectStorage/apiServer/temp"
 	"ObjectStorage/apiServer/versions"
 	"log"
 	"net/http"
@@ -18,6 +19,8 @@ func main() {
 	http.HandleFunc("/locate/", locate.Handler)
 	//Get版本所有信息，直接查询元数据服务器
 	http.HandleFunc("/versions/", versions.Handler)
+	//
+	http.HandleFunc("/temp/", temp.Handler)
 
 	log.Fatalln(http.ListenAndServe(os.Getenv("LISTEN_ADDRESS"), nil))
 }
